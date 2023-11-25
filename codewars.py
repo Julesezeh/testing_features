@@ -28,6 +28,8 @@ class User:
         self.progress = progress
 
     def inc_progress(self, activity):
+        if self.rank > 0:
+            self.rank -= 1
         progress = calculate(self.rank, activity)
         #         print ("rankings",rankings[self.rank])
         #         print("progress",progress)
